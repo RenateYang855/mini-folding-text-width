@@ -1,0 +1,17 @@
+{
+  "name": "mini-folding-text-width",
+  "version": "0.1.0",
+  "description": "Returns the number of monospace cells needed to display a Unicode string",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
