@@ -32,3 +32,10 @@ Hangul Jamo vowels and trails (`U+1160`–`U+11FF`) are treated as zero-width be
 - `foldWidth(str, maxWidth): string[]` — hard-wrap into lines, preserving `\n`.
 - `charWidth(cp): number` — width of a single code point (0, 1, or 2).
 - `WIDE_RANGES`, `COMBINING_RANGES`, `HANGUL_JAMO_ZERO_WIDTH` — the range tables, exported for inspection and reuse.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
